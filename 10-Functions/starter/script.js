@@ -284,7 +284,7 @@ runOnce();
 // console.log(isPrivate);
 console.log(notPrivate); */
 
-const secureBooking = () => {
+/* const secureBooking = () => {
   let passengerCount = 0;
   return () => {
     passengerCount++;
@@ -297,3 +297,70 @@ const booker = secureBooking();
 booker();
 booker();
 booker();
+
+console.dir(booker);
+*/
+
+// Example 1
+/* let f;
+
+const g = () => {
+  const a = 23;
+  f = () => {
+    console.log(a * 2);
+  };
+};
+
+const h = () => {
+  const b = 777;
+  f = () => {
+    console.log(b * 2);
+  };
+};
+
+g();
+f();
+console.dir(f);
+
+// Re-assigning f function
+h();
+f();
+console.dir(f);
+
+// Example 2
+const boardPassengers = (n, wait) => {
+  const perGroup = n / 3;
+
+  setTimeout(() => {
+    console.log(`We are now boarding ${n} passengers`);
+    console.log(`There are 3 groups, each with ${perGroup} passengers`);
+  }, wait * 1000);
+
+  console.log(`Will start boarding in ${wait} seconds`);
+};
+
+// setTimeout(() => {
+//   console.log("TIMER");
+// }, 1000);
+
+const perGroup = 1000;
+boardPassengers(180, 3); */
+
+// Coding Challenge #2
+
+/* 
+This is more of a thinking challenge than a coding challenge 🤓
+
+Your tasks:
+1. Take the IIFE below and at the end of the function, attach an event listener that changes the color of the selected h1 element ('header') to blue, each time the body element is clicked. Do not select the h1 element again!
+
+2. And now explain to yourself (or someone around you) why this worked! Take all the time you need. Think about when exactly the callback function is executed, and what that means for the variables involved in this example. */
+
+/* (() => {
+  const header = document.querySelector("h1");
+  header.style.color = "red";
+
+  document.querySelector("body").addEventListener("click", () => {
+    header.style.color = "blue";
+  });
+})(); */
